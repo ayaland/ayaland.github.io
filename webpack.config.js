@@ -22,6 +22,9 @@ module.exports = {
       }
     ]
   },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+  },
   plugins: [
     new BrowserSyncPlugin({
       host: 'localhost',
@@ -30,11 +33,11 @@ module.exports = {
       files: ['./dist/*'],
       notify: false
     }),
-    new HtmlWebpackPlugin({
-      filename: 'index.html',
-      favicon: 'favicon.ico',
-      template: 'src/index.html'
-    })
+    // new HtmlWebpackPlugin({
+    //   filename: 'index.html',
+    //   favicon: 'favicon.ico',
+    //   template: 'dist/index.html'
+    // })
   ],
   watch: true,
   devtool: 'source-map'
